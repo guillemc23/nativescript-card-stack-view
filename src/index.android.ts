@@ -1,7 +1,7 @@
-/// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
+/// <reference path="./node_modules/@nativescript/types/index.d.ts" />
 
-import { View } from 'tns-core-modules/ui/core/view';
-import { isNullOrUndefined, isNumber } from 'tns-core-modules/utils/types';
+import { View } from '@nativescript/core';
+import { isNullOrUndefined, isNumber } from '@nativescript/core/utils/types';
 
 import {
   CardStackCommon,
@@ -9,7 +9,7 @@ import {
   CLogTypes,
   ITEMLOADING
 } from './index.common';
-import { fromObject } from 'tns-core-modules/data/observable';
+import { fromObject } from '@nativescript/core';
 
 export * from './index.common';
 

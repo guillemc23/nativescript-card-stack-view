@@ -1,36 +1,21 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
+    "module": "esnext",
+    "target": "ES2020",
+    "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noEmitHelpers": true,
     "noEmitOnError": true,
     "skipLibCheck": true,
-    "lib": [
-      "es6",
-      "dom",
-      "es2015.iterable"
-    ],
+    "lib": ["ESNext", "dom"],
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./node_modules/tns-core-modules/*",
-        "./node_modules/*"
-      ],
-      "~/*": [
-        "app/*"
-      ]
+      "~/*": ["src/*"],
+      "@/*": ["src/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "platforms",
-    "../src/node_modules",
-    "**/*.spec.ts"
-  ],
-  "include": [
-    "../src",
-    "**/*"
-  ]
+  "include": ["src/tests/**/*.ts", "src/**/*.ios.ts", "src/**/*.android.ts"],
+  "files": ["./src/main.ts", "./references.d.ts", "./src/polyfills.ts"],
+  "exclude": ["node_modules", "platforms", "e2e"]
 }

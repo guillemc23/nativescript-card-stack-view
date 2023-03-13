@@ -1,7 +1,6 @@
-import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
-import { KeyedTemplate, Property, Template, View } from 'tns-core-modules/ui/core/view';
-import { GridLayout } from 'tns-core-modules/ui/layouts/grid-layout';
-import { StackLayout } from 'tns-core-modules/ui/layouts/stack-layout';
+import { ObservableArray } from '@nativescript/core';
+import { KeyedTemplate, Property, Template, View } from '@nativescript/core';
+import { StackLayout, GridLayout } from '@nativescript/core';
 
 export declare class CardStack extends CardStackCommon {
   private _androidViewId;

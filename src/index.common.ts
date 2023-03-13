@@ -1,13 +1,12 @@
-import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
-import { KeyedTemplate, Observable, Property, Template, View } from 'tns-core-modules/ui/core/view';
+import { ObservableArray } from '@nativescript/core';
+import { KeyedTemplate, Observable, Property, Template, View } from '@nativescript/core';
 import {
   addWeakEventListener,
   removeWeakEventListener
-} from 'tns-core-modules/ui/core/weak-event-listener/weak-event-listener';
-import { GridLayout } from 'tns-core-modules/ui/layouts/grid-layout';
-import { StackLayout } from 'tns-core-modules/ui/layouts/stack-layout';
-import { isNullOrUndefined, isNumber } from 'tns-core-modules/utils/types';
-import { parse } from 'tns-core-modules/ui/builder';
+} from '@nativescript/core';
+import { StackLayout, GridLayout } from '@nativescript/core';
+import { isNullOrUndefined, isNumber } from '@nativescript/core/utils/types';
+import { parse } from '@nativescript/core/ui/builder';
 
 export class CardStackUtil {
   public static debug: boolean = false;
@@ -21,7 +20,7 @@ export enum CLogTypes {
 
 export const ITEMLOADING = 'itemLoading';
 
-export const CLog = (type: CLogTypes = 0, ...args) => {
+export const CLog = (type: CLogTypes = 0, ...args: string[]) => {
   if (CardStackUtil.debug) {
     if (type === 0) {
       // Info

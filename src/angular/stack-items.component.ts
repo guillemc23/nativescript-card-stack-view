@@ -20,23 +20,25 @@ import {
   ViewContainerRef,
   ɵisListLikeIterable as isListLikeIterable
 } from '@angular/core';
-import { ItemEventData } from 'tns-core-modules/ui/list-view';
-import { KeyedTemplate, View } from 'tns-core-modules/ui/core/view';
-import { LayoutBase } from 'tns-core-modules/ui/layouts/layout-base';
-import { ObservableArray } from 'tns-core-modules/data/observable-array';
-import { profile } from 'tns-core-modules/profiling';
+import { ItemEventData } from '@nativescript/core';
+import { KeyedTemplate, View } from '@nativescript/core';
+import { LayoutBase } from '@nativescript/core';
+import { ObservableArray } from '@nativescript/core';
+import { profile } from '@nativescript/core';
 
-import { getSingleViewRecursive, InvisibleNode, registerElement } from 'nativescript-angular/element-registry';
-import { isEnabled as isLogEnabled } from 'tns-core-modules/trace';
+import { getSingleViewRecursive, InvisibleNode, registerElement } from '@nativescript/angular';
+// import { isEnabled as isLogEnabled } from '@nativescript/core/trace'
 import { CardStackItem } from '../index.common';
 import { CardStack } from '../';
-import { isBlank } from 'nativescript-angular/lang-facade';
+import { isBlank } from '@nativescript/angular';
 
 registerElement('CardStack', () => CardStack);
 registerElement('CardStackItem', () => CardStackItem);
 
 const NG_VIEW = '_ngViewRef';
 
+const isLogEnabled = () => true;
+ 
 export class ItemContext {
   constructor(
     public $implicit?: any,
